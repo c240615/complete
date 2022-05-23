@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九九乘法表</title>
+</head>
+<body>
+    <script>
+        
+        
+        for(let i = 1;i < 10;i++){
+            for(let j = 1;j <= i;j++){
+                document.write('<span>' + j + '*' + i + '=' + i*j + '</span>');
+            }
+            document.write('<br>' + '<br>' );
+        }
+        
+
+
+    </script>
+    <!-- display:inline-block 會依照元素中的內容來決定內容的寬高，不會佔滿容器橫向的剩餘空間，還可以額外透過 width、height、max-width、max-height 等 CSS 屬性來更改該元素的寬高 -->
+    <style type="text/css">
+        span{
+            display: inline-block;
+            width: 100px;
+        }
+
+    </style>
+</body>
+</html>
