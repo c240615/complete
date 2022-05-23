@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交錯漂浮版</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /*滿版設定*/
+        body{
+            padding: 100px 0;
+            background:linear-gradient(20deg, cadetblue,rgb(231, 247, 144)) fixed /*固定漸層畫面*/ center/*固定背景x軸*/ center/*固定背景y軸*//100% 100%/*固定背景尺寸(寬高)*/;
+        }
+        /*圖文排序依據*/
+        .wrap{
+            width: 1200px;
+            margin: auto;
+            
+           
+        }
+        /*個別圖文排序*/
+        .item{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 70px;           
+        }
+        /*所有圖片內容排版*/
+        .pic{
+            width: 55%;
+            height: 100%;
+           
+        }
+        /*使圖片滿版，貼合pic容器*/
+        .pic img{
+            width: 100%;
+        }
+        /*所有文字內容排版*/
+        .txt{
+            width: 55%;
+            background-color: rgb(226, 245, 164);
+            /*background-color: rgb(231, 247, 144);*/
+            
+            /*flex-grow (預設值爲 0，依照設定比例分配剩餘空間)
+            | flex-shrink (空間不夠時的壓縮比例，預設值爲 1)、e.g 3個盒子寬度a、b、c，公式a壓縮值=不足空間*flex-shrink值*a/a+b+c
+            | flex-basis (比width優先)*/
+            flex-shrink:0;
+            padding: 50px 30px;
+            /*自動調整物件寬高*/
+            box-sizing: border-box;
+            /* relative 相對於原本的位置移動、仍佔據原本的位置、其他元素的定位不受影響、元素會重疊*/
+            /* absolute 脫離父元素範圍、往外層的元素找是否有position:relative | absolute | fixed | inherit 若是都沒有，就會以該網頁頁面(<body>)的左上角為定位點*/
+            position:relative  ;
+            /*左右=x軸、上下=y軸、面對自己的方向=z軸，z-index 的值越大，代表離自己越靠近*/
+            z-index: 1;
+        }
+        .item > :first-child{
+            margin-right: -10%;
+        }
+        .item :nth-child(1) .txt{
+            background-color: #f0aec1;
+        }
+        .item :nth-child(2) .txt{
+            background-color: #2afdd0;
+        }
+        .item :nth-child(3) .txt{
+            background-color: #fec979;
+        }
+        .item :nth-child(4) .txt{
+            background-color: #95dbd6;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- item 1 -->
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/200/200" alt="">                
+            </div>
+            <div class="txt">
+                <h2>靜夜思</h2>
+                <p>
+                    床前明月光，疑是地上霜。<br>
+                    舉頭望明月，低頭思故鄉。<br>                    
+                </p>
+            </div>
+        </div>
+    
+        <!-- item 2 -->
+        <div class="item">
+            <div class="txt">
+                <h2>獨坐敬亭山</h2>
+                <p>
+                    眾鳥高飛盡，孤雲獨去閑。
+                    相看兩不厭，只有敬亭山。
+                </p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/200/200" alt="">                
+            </div>
+            
+        </div>
+    
+        <!-- item 3 -->
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/200/200" alt="">                
+            </div>
+            <div class="txt">
+                <h2>夜宿山寺</h2>
+                <p>
+                    危樓高百尺，手可摘星辰。
+                    不敢高聲語，恐驚天上人。
+                </p>
+            </div>
+        </div>
+ 
+        <!-- item 4 -->
+        <div class="item">
+            <div class="txt">
+                <h2>D</h2>
+                <p>
+                    美人卷珠簾，深坐顰蛾眉。
+                    但見淚痕濕，不知心恨誰。
+                </p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/200/200" alt="">                
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

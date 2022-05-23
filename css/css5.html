@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>橫式版面</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .wrap{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-30deg,#fdaecb,#e7597f,#fe8556);
+            
+            
+        }
+        .container{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+        .item{
+            width: 370px;
+            margin: 15px;
+            display: flex;
+            background-color: azure;
+            border: 1px solid burlywood;
+            /* x軸 y軸 模糊程度 色彩*/
+            box-shadow: 0 10px 30px rgba(160,0,0,0.5);
+            
+        }
+        .pic{
+            width: 50%;
+        }
+        .pic img{
+            width: 100%;height: 100%;
+            object-fit: cover;
+        }
+        .txt{
+            writing-mode:horizontal-tb;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+        .txt h2{
+            margin-bottom: 1px;
+        }
+        
+        
+        .btn{
+            line-height: 1.5em;
+            border: 1px solid #ccc;
+            padding: 0 1em;
+            /*align(對齊)-self 只操控單個
+              align-items 操控每個單行
+              align-content 操控整體
+              預設：auto
+              auto | stretch | flex-start | center | flex-end | baseline(文字底部)*/
+            align-self: flex-end;
+            /*underline/ underline dotted/ underline dotted red/ green wavy underline/ underline overline #FF3028 */
+            text-decoration: none;
+            border-radius: 200px;
+            margin-top: auto;
+            color: #aaa;
+        }
+        .btn:hover{
+            background-color: cadetblue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景畫面 -->
+    <div class="wrap">
+        <!-- 固定寬度容器 -->
+        <div class="container">
+            <!-- 放圖文1 -->
+            <div class="item">
+                <!-- 圖1 -->
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400?random=10" alt="">
+                </div>
+                <!-- 文1 -->
+               <div class="txt">
+                   <h2>如夢令</h2>
+                   <p>
+                        昨夜雨疏風驟，<br>
+                        濃睡不消殘酒。<br>
+                        試問卷帘人，<br>
+                        卻道海棠依舊。<br>
+                        知否？知否？<br>
+                        應是綠肥紅瘦<br>
+                    </p>
+                   <a href="" class="btn">more</a>
+               </div>
+               
+            </div>
+            <!-- 放圖文2 -->
+            <div class="item">
+                <!-- 圖2 -->
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400?random=11" alt="">
+                </div>
+                <!-- 文2 -->
+                <div class="txt">
+                    <h2>如夢令</h2>
+                   <p>
+                        常記溪亭日暮，<br>
+                        沉醉不知歸路。<br>
+                        興盡晚回舟，<br>
+                        誤入藕花深處。<br>
+                        爭渡，爭渡，<br>
+                        惊起一灘鷗鷺。<br>
+                    </p>
+                   <a href="" class="btn">more</a>
+                </div>
+            </div>
+
+            <!-- 放圖文3 -->
+            <div class="item">
+                <!-- 圖3 -->
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400?random=12" alt="">
+                </div>
+                <!-- 文3 -->
+                <div class="txt">
+                    <h2>如夢令</h2>
+                   <p>
+                        誰伴明月獨坐？<br>
+                        我金影兒兩個。<br>
+                        燈盡欲眠時，<br>
+                        影也把人拋躲，<br>                    
+                        無那，無那，<br>
+                        好個悽惶的我！<br>
+                    </p>
+                   <a href="" class="btn">more</a>
+                </div>
+            </div>
+            <!-- 放圖文4 -->
+            <div class="item">
+                <!-- 圖4 -->
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400?random=13" alt="">
+                </div>
+                <!-- 文4 -->
+                <div class="txt">
+                    <h2>浣溪沙</h2>
+                   <p>
+                        繡幕芙蓉一笑開，<br>
+                        斜偎寶鴨親香腮，<br>
+                        眼波才動被人猜。<br>                   
+                        一面風情深有韻，<br>
+                        半箋嬌恨寄幽怀，<br>
+                        月移花影約重來。<br>
+                    </p>
+                   <a href="" class="btn">more</a>
+                </div>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

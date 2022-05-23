@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖文滿版區塊</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .fish{
+            width: 100vw;height: 100vh;
+            background-color:rgb(72, 72, 165) ;
+            background: linear-gradient(115deg,rgb(220, 220, 100) 50%,transparent 50%) center center/100% 100%,
+            url(https://picsum.photos/300/300) center right/auto 100%;
+            /* background: color image attachment repeat poition / size */
+            /*
+        background-color
+        background-image
+        background-attachment
+        background-repeat
+        background-poition
+        background-size
+        */
+        }
+        .banana{
+            
+            height: 100%;
+            position: flex;            
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;            
+        }
+        .tiger{            
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .tiger h1{
+            display:flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-bottom: 1px solid red;
+        } 
+        
+
+    </style>
+</head>
+<body>
+    <div class="fish">
+    <div class="banana">  
+    <div class="tiger">
+        <h1>李商隱</h1>        
+        <h2>錦瑟</h2>
+        <p>滄海月明珠有淚，藍田日暖玉生煙。</p>
+    </div>
+    </div>  
+    </div>
+    
+
+</body>
+</html>

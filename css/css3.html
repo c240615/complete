@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人員介紹卡片</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            background-color: rgb(152, 152, 199);
+        }
+        /*三張卡片的容器*/
+       .container{
+            width: 1200px;
+            display: flex;
+            margin: auto;
+           
+
+        }
+        /*個別人員卡片本體*/
+        .item{
+            /*1200/3-15*2=370*/
+            width: 370px;
+            height: 700px;
+            margin: 15px;
+            /*a、b、c置中*/
+            text-align: center;
+            background-color: wheat;
+        }
+        /*個別人員卡片中的圖*/
+        .item img{
+            width: 300px;
+            height: 400px;
+        }
+        /*個別人員卡片中的h2*/
+        .item h2{
+            background-color: aqua;
+            border-bottom: 1px solid #888;
+            padding-bottom: 0.3em;
+            margin-bottom: 0.3em;
+            font-weight: 900;
+        }
+        /*個別人員卡片中的p*/
+        .item p{
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Libai_touxiang.jpg/220px-Libai_touxiang.jpg" alt="假圖">
+            <div class="txt">
+                <h2>李白</h2>
+                <p>
+                    幼時內遷，寄籍劍南道綿州昌隆。<br>
+                    先人隋末被竄於碎葉，出生於碎葉，屬唐安西都護府。<br>
+                    有「詩仙」、「詩俠」、「酒仙」、「謫仙人」等稱呼，活躍於盛唐，為傑出的浪漫主義詩人。<br>
+                    與杜甫合稱「李杜」。被賀知章稱為「天上謫仙」、「李謫仙」。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Dufu.jpg/200px-Dufu.jpg" alt="假圖">
+            <div class="txt">
+                <h2>杜甫</h2>
+                <p>
+                    杜甫，字子美，號少陵野老，唐朝現實主義詩人。<br>
+                    家族出於京兆杜氏分支，唐朝時京兆杜氏多自稱為杜陵人。<br>
+                    曾任左拾遺、檢校工部員外郎，後曾隱居成都草堂，世稱杜少陵、杜草堂。<br>
+                    與李白並稱「李杜」，作品集為《杜工部集》。詩歌以渾樸沉鬱著稱。
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Li_Yu_scth.jpg/300px-Li_Yu_scth.jpg" alt="假圖">
+            <div class="txt">
+                <h2>李煜</h2>
+                <p>
+                    南唐的最後一任國主。<br>
+                    原名從嘉，字重光，號鍾山隱士。<br>
+                    南唐滅亡後，李煜被北宋俘虜，卻因此際遇成為首屈一指的詞人。<br>
+                    後人譽為千古詞帝，作品千古流名。
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

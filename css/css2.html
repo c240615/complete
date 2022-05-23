@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖文容器</title>
+    
+    <style class="text/css">
+    
+        *{
+            margin:0;
+            padding:0;
+            list-style:none;
+            background-color: rgb(233, 237, 188);
+        }
+        /* 圖文容器 */
+        .wrap{
+            width: 100%;
+            display: flex;
+            align-items: center;
+           
+        }
+        /* 圖加文 */
+        .item{
+            width: 25%;
+            /* 相對於原本的位置移動
+            仍佔據原本的位置
+            其他元素的定位不受影響
+            元素會重疊*/
+            position: relative;
+        }
+        .item img{
+            width: 100%;
+            /*垂直對齊*/
+            vertical-align: middle;
+            
+        }
+        .item .txt{
+            /* 跳脫該圖層、原本定位消失、往外層的元素找position */
+            position: absolute;
+             top: 0;bottom: 0;left: 0;right: 0;
+            padding: 20px ;
+            background-color: rgb(233, 237, 188);
+            /* 文字正中間 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            /* 文字透明 */
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        /* item被摸到 */
+        .item:hover .txt{
+            /* 文字顯現*/
+            opacity: 1;
+        }
+        .item h2{
+            font-size: 28px;
+            color: rgb(8, 77, 8);
+        }
+        .item h2:after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            margin: 10% 0;
+            background-color: rgb(90, 4, 91);
+            /* transition-duration transition-delay*/
+            transition: width .5s .3s;
+        }     
+        .item :hover5r h2:after{
+            width: 100%;
+        }
+        .item p{
+            height: 200px;
+            font-size: 18px;
+            color: rgb(5, 81, 148);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <img src=" https://picsum.photos/300/300" >
+           <div class="txt">
+               <h2>
+                純益率
+                </h2>
+               <p>                                
+                純益率＝<br>
+                [稅前淨利÷（營業收入＋營業外收入）]*100%
+               </p>
+           </div>
+        </div>
+        <div class="item">
+            <img src=" https://picsum.photos/300/300" >
+           <div class="txt">
+               <h2>
+                流動比率
+                </h2>
+               <p>
+                流動比率＝<br>
+                流動資產÷流動負債
+               </p>
+           </div>
+        </div>
+        <div class="item">
+            <img src=" https://picsum.photos/300/300" >
+           <div class="txt">
+               <h2>
+                存貨週轉率
+                </h2>
+               <p>
+                存貨週轉率＝<br>
+                營業成本÷存貨
+               </p>
+           </div>
+        </div>
+        <div class="item">
+            <img src=" https://picsum.photos/300/300" >
+           <div class="txt">
+               <h2>
+                應收帳款週轉率
+                </h2>
+               <p>
+                應收帳款週轉率＝<br>
+                營業收入÷各期平均應收款項餘額
+               </p>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
